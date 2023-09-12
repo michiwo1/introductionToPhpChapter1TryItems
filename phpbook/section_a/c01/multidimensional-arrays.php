@@ -3,6 +3,7 @@ $offers = [
     ['name' => 'Toffee', 'price' => 5, 'stock' => 120,],
     ['name' => 'Mints',  'price' => 3, 'stock' => 66,],
     ['name' => 'Fudge',  'price' => 4, 'stock' => 97,],
+    ['name' => 'Chocolate',  'price' => 2, 'stock' => 83,],
 ];
 ?>
 <!DOCTYPE html>
@@ -14,11 +15,8 @@ $offers = [
   <body>
     <h1>The Candy Store</h1>
     <h2>Offers</h2>
-    <p><?php echo $offers[0]['name']; ?> -
-      $<?php echo $offers[0]['price']; ?> </p>
-    <p><?php echo $offers[1]['name']; ?> -
-      $<?php echo $offers[1]['price']; ?> </p>
-    <p><?php echo $offers[2]['name']; ?> -
-      $<?php echo $offers[2]['price']; ?> </p>
+    <?php foreach($offers as $offer) : ?>
+      <p><?= $offer['name'] ?> - <?= $offer['price'] ?></p>
+    <?php endforeach; ?>
   </body>
 </html>
